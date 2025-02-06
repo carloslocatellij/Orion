@@ -55,6 +55,20 @@ def test_update_user_retornar_200_e_user_atualizado(client):
     }
 
 
+def test_update_user_invalido(client):
+    response = client.put(
+        '/users/999',
+        json={
+            'username': 'xxx',
+            'email': 'xxx@example.com',
+            'password': 'xxx123',
+        },
+    )
+
+    assert response.status_code == HTTPStatus.NOT_FOUND
+    assert response.json() == {'detail': 'User not found'}
+
+
 def test_delete_user(client):
     response = client.delete('/users/1')
 
