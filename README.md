@@ -1,8 +1,5 @@
-# Orion é um pequeno organizador pessoal
-## Multiplataforma, sincronizado, agil
+# Orion - Organizador Pessoal
 
-### Orion é :
-- listas,
-- notas simples,
-- tarefas
-- e projetos
+## Lista de Tarefas, Notas, Projetos, Planos, etc ...
+
+### Aberto a contribuições
