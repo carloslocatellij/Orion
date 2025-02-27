@@ -31,7 +31,7 @@ def read_users():
 def update_user(user_id: int, user: User, status_code=HTTPStatus.OK):
     if user_id > len(database) or user_id < 1:
         raise HTTPException(
-            status_code - HTTPStatus.NOT_FOUND, detail='User not found'
+            status_code=HTTPStatus.NOT_FOUND, detail='User not found'
         )
     user_id = UserDB(**user.model_dump(), id=user_id)
 
